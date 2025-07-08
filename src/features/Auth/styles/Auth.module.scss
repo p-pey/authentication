@@ -1,0 +1,44 @@
+.AuthContainer {
+  width: 100vw;
+  height: 100vh;
+
+  .FormWrapper {
+    width: 500px;
+    height: 500px;
+    box-shadow: 3px 3px 3px 0 #ccc;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .Title {
+      color: var(--text-primary);
+      font-size: 24px;
+    }
+    .Form {
+      display: flex;
+      flex-direction: column;
+
+      gap: 12px;
+      .FormGroup {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        .Label {
+          font-size: 12px;
+        }
+        .Input {
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          outline: none;
+          padding: 4px;
+        }
+        .Error {
+          color: red;
+        }
+      }
+      .Button {
+        margin-top: auto;
+      }
+    }
+  }
+}
