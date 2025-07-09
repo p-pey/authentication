@@ -2,43 +2,87 @@
   width: 100vw;
   height: 100vh;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: map-get($breakpoints, md)) {
+    padding: $spacing-medium;
+  }
+
   .FormWrapper {
     width: 500px;
-    height: 500px;
-    box-shadow: 3px 3px 3px 0 #ccc;
-    padding: 14px;
+    height: 400px;
+    box-shadow: $shadow-secondary;
+    padding: $spacing-medium;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: $spacing-xlarge;
     .Title {
       color: var(--text-primary);
       font-size: 24px;
     }
+    .FormMessage {
+      &.success {
+        padding: $spacing-small;
+        font-size: $typography-medium;
+        border: 1px solid $success;
+        color: $success;
+        border-radius: $radius-medium;
+      }
+      &.error {
+        padding: $spacing-small;
+        font-size: $typography-medium;
+        border: 1px solid $error;
+        color: $error;
+        border-radius: $radius-medium;
+      }
+    }
     .Form {
       display: flex;
       flex-direction: column;
-
+      height: 100%;
       gap: 12px;
       .FormGroup {
         display: flex;
         flex-direction: column;
-        gap: 4px;
+        gap: $spacing-small;
         .Label {
-          font-size: 12px;
+          font-size: $typography-small;
+          font-weight: 700;
         }
         .Input {
-          border: 1px solid #ccc;
-          border-radius: 5px;
+          border: none;
+          border-radius: $radius-medium;
           outline: none;
-          padding: 4px;
+          padding: $spacing-small;
+          &:focus {
+            box-shadow: $shadow-primary;
+          }
         }
         .Error {
-          color: red;
+          color: $error;
+          font-size: $typography-small;
+          font-weight: 400;
+          display: inline-block;
+          height: $spacing-medium;
         }
       }
       .Button {
         margin-top: auto;
+        padding: $spacing-medium;
+        border: 1px solid $secondary;
+        border-radius: $radius-medium;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+          border: 1px solid $primary;
+          box-shadow: $shadow-primary;
+        }
       }
+    }
+    @media (max-width: map-get($breakpoints, md)) {
+      width: 100%;
     }
   }
 }

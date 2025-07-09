@@ -1,0 +1,50 @@
+// Color Palette for Login Form and Dashboard (Light Theme Only)
+// Primary Colors (Main branding)
+$primary: #007bff; // Blue for buttons, links, and highlights
+$primary-dark: darken($primary, 10%); // Darker variant for hover
+$primary-light: lighten($primary, 10%); // Lighter variant for subtle accents
+
+// Secondary Colors (Complementary)
+$secondary: #6c757d; // Gray for secondary elements
+$secondary-dark: darken($secondary, 10%);
+$secondary-light: lighten($secondary, 10%);
+
+// Neutral Colors (Backgrounds, text, borders)
+$background: #ffffff; // White for background
+$surface: #f8f9fa; // Light surface for cards, modals
+$text-primary: #212529; // Dark text for readability
+$text-secondary: #6c757d; // Muted text for subtitles
+$border: #dee2e6; // Light border for elements
+
+// Feedback Colors
+$success: #28a745; // Green for success messages
+$error: #dc3545; // Red for error messages
+$warning: #ffc107; // Yellow for warnings
+$info: #17a2b8; // Cyan for informational messages
+
+$shadow-primary: 0 0 10px rgba($primary, 0.2);
+$shadow-secondary: 0 0 10px rgba($secondary, 0.2);
+
+$spacing-smaller: 8px;
+$spacing-small: 12px;
+$spacing-medium: 16px;
+$spacing-large: 24px;
+$spacing-xlarge: 32px;
+
+$typography-small: 12px;
+$typography-medium: 16px;
+$typography-large: 24px;
+$typography-xlarge: 32px;
+
+$radius-small: 4px;
+$radius-medium: 8px;
+$radius-large: 16px;
+$radius-xlarge: 24px;
+
+// Breakpoints for Responsive Design
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
